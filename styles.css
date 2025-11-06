@@ -1,0 +1,253 @@
+/* =========================================================
+01) ROOT VARIABLE — Warna, ukuran layar, radius, brand tone
+========================================================= */
+:root {
+  --bg1: #fff7f8;      /* background lembut */
+  --bg2: #ffdfdf;      /* aksen background */
+  --radius: 14px;      /* radius card menu */
+  --tv-width: 1280px;  /* resolusi layar display */
+  --tv-height: 720px;
+
+  /* Theme Brand Style (KFC vibes) */
+  --kfc-red: #d6001c;
+  --kfc-dark: #2b2b2b;
+  --kfc-gold: #f8c300;
+}
+
+/* =========================================================
+02) RESET & BASE STYLE
+========================================================= */
+* { box-sizing: border-box; margin: 0; padding: 0; }
+
+html, body {
+  height: 100%;
+  width: 100%;
+  overflow: hidden;
+  font-family: "Poppins", sans-serif;
+  background: var(--bg1);
+  color: var(--kfc-dark);
+}
+
+/* =========================================================
+03) WRAPPER LAYOUT SCREEN (fullscreen tv mode)
+========================================================= */
+.screen {
+  display: flex;
+  flex-direction: column;
+  height: 100vh;
+  align-items: center;
+  justify-content: center;
+}
+
+/* =========================================================
+04) HEADER — Logo, Brand, Tagline
+========================================================= */
+.site-header {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  text-align: center;
+  gap: 6px;
+  padding: 16px 0;
+  width: 100%;
+  max-width: var(--tv-width);
+  border-bottom: 4px solid var(--kfc-red);
+}
+
+.logo {
+  height: 95px;
+  margin-bottom: 4px;
+}
+
+.brand {
+  font-size: 48px;
+  font-weight: 900;
+  color: var(--kfc-red);
+  text-transform: uppercase;
+}
+
+.subtitle {
+  font-weight: 600;
+  color: #7c000e;
+  font-size: 18px;
+  margin-top: -4px;
+}
+
+/* =========================================================
+05) MAIN CONTENT AREA
+========================================================= */
+.main-content {
+  flex: 1;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  padding: 12px 24px;
+  width: 100%;
+  max-width: var(--tv-width);
+}
+
+.recommend-section {
+  text-align: center;
+}
+
+.recommend-section h2 {
+  font-size: 36px;
+  font-weight: 900;
+  color: var(--kfc-red);
+  margin-bottom: 20px;
+  letter-spacing: 1px;
+}
+
+/* =========================================================
+06) GRID DISPLAY PRODUK
+========================================================= */
+.menu-grid {
+  display: flex;                  /* default flex */
+  justify-content: center;
+  gap: 26px;
+  transition: opacity .8s ease;
+}
+
+/* =========================================================
+07) CARD PRODUK
+========================================================= */
+.card {
+  background: #ffffff;
+  border-radius: var(--radius);
+  width: 330px;
+  height: 430px;
+  overflow: hidden;
+  box-shadow: 0 6px 14px rgba(0,0,0,.2);
+  border: 3px solid var(--kfc-red);
+  transition: transform .15s ease;
+  position: relative;
+}
+
+/* Hover anim jump */
+.card:hover { transform: translateY(-6px); }
+
+/* Gambar produk */
+.card img {
+  width: 100%;
+  height: 60%;
+  object-fit: cover;
+}
+
+/* Stripes ala KFC di atas card */
+.card::before {
+  content: "";
+  position: absolute;
+  top: 0; left: 0;
+  width: 100%;
+  height: 60px;
+  background:
+    repeating-linear-gradient(
+      45deg,
+      var(--kfc-red),
+      var(--kfc-red) 20px,
+      #ffffff 20px,
+      #ffffff 40px
+    );
+  opacity: .25;
+  z-index: 1;
+  pointer-events: none;
+}
+
+/* Body text card */
+.card-body {
+  padding: 14px;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+}
+
+.card-title {
+  font-size: 22px;
+  font-weight: 900;
+  color: var(--kfc-dark);
+  text-transform: uppercase;
+}
+
+.card-desc {
+  font-size: 14px;
+  color: #6b000a;
+  min-height: 44px;
+}
+
+.card-price {
+  font-size: 24px;
+  font-weight: 900;
+  color: var(--kfc-red);
+  background: #ffeaea;
+  padding: 6px 10px;
+  border-radius: 8px;
+  display: inline-block;
+  border: 2px solid var(--kfc-red);
+}
+
+/* =========================================================
+08) FOOTER COPYRIGHT
+========================================================= */
+.site-footer {
+  text-align: center;
+  font-size: 14px;
+  color: #6b000a;
+  padding: 10px 0;
+  background: #fff5f5;
+  width: 100%;
+  border-top: 4px solid var(--kfc-red);
+  font-weight: 600;
+}
+
+/* =========================================================
+09) 16:9 TV AUTO SCALE MODE — Smart kiosk display
+========================================================= */
+@media (min-aspect-ratio: 16/9) {
+  .screen { transform-origin: top center; transform: scale(calc(100vh / var(--tv-height))); }
+}
+@media (max-aspect-ratio: 16/9) {
+  .screen { transform-origin: center left; transform: scale(calc(100vw / var(--tv-width))); }
+}
+/* =========================================================
+10) Teks berjalan di
+========================================================= */
+.footer-ticker {
+  width: 100%;
+  overflow: hidden;
+  background: #000;
+  color: #ffca00;
+  padding: 6px 0;
+  border-top: 2px solid #ffca00;
+  position: relative;
+  font-weight: 700;
+  letter-spacing: 0.5px;
+  font-size: 1rem;
+}
+
+.footer-ticker span {
+  display: inline-block;
+  white-space: nowrap;
+  padding-left: 100%;
+  animation: ticker 20s linear infinite;
+}
+
+@keyframes ticker {
+  0% { transform: translateX(0); }
+  100% { transform: translateX(-100%); }
+}
+/* =========================================================
+11) Jam realtime
+========================================================= */
+.clock-board {
+  font-size: 22px;
+  font-weight: 700;
+  color: #ffca00;
+  background: #111;
+  padding: 6px 14px;
+  border-radius: 8px;
+  margin-top: 4px;
+  display: inline-block;
+  border: 2px solid #ffca00;
+}
+

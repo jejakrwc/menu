@@ -1,0 +1,56 @@
+<!doctype html>
+<html lang="id">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width,initial-scale=1" />
+  <title>GAMEZONE PADANG - Display Menu</title>
+
+  <link rel="stylesheet" href="styles.css">
+  <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;600;800&display=swap" rel="stylesheet">
+</head>
+
+<body>
+<div class="screen">
+
+<header class="site-header">
+  <img src="img/logo.png" alt="GAMEZONE PADANG logo" class="logo center-logo">
+  <h1 class="brand center-text">GAMEZONE PADANG</h1>
+  <p class="subtitle center-text">Menu & Promo — Display</p>
+  <div id="displayClock" class="clock-board"></div>
+  
+</header>
+
+<main class="main-content" id="main-content">
+  <section class="recommend-section">
+    <h2>PILIHAN MENU MAKANAN DAN MINUMAN</h2>
+    <div class="menu-grid" id="recommend-grid"></div>
+  </section>
+</main>
+
+<footer class="site-footer">
+  <div class="footer-ticker">
+    <span>
+      🎮 Selamat Datang di GAMEZONE PADANG — Promo Hari Ini: Paket PS 2 Jam + Es Teh Rp 20.000 ✨ | 
+      Top Up Game & Snack Termurah! | 
+      Follow IG: @gamezonepadang | 
+      Happy Gaming! 😎🔥 
+    </span>
+  </div>
+  <p>© 2025 GAMEZONE PADANG — Display Offline</p>
+</footer>
+
+</div>
+
+<script src="menu-data.js"></script>
+<script src="script.js"></script>
+
+<script>
+document.addEventListener("click", () => {
+  if (!document.fullscreenElement) {
+    document.documentElement.requestFullscreen().catch(()=>{});
+  }
+}, { once: true });
+</script>
+
+</body>
+</html>
