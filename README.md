@@ -18,10 +18,19 @@ Proyek ini menampilkan menu makanan, minuman, dan promo dalam format layar fulls
 ---
 
 ## 🛠 Struktur File
-/project-root
+-/project-root
 │
 ├─ index.html # Halaman utama display menu
 ├─ styles.css # Styling layout dan tema
 ├─ script.js # Logika slideshow, clock, fullscreen
 ├─ menu-data.js # Data menu (nama, harga, deskripsi, popularitas, gambar)
 └─ img/ # Folder berisi semua gambar menu
+
+
+---
+
+## ⚡ Instalasi & Penggunaan
+1. **Clone atau download repository**:
+```bash
+git clone https://github.com/username/gamezone-display.git
+cd gamezone-display
