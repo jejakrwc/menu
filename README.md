@@ -34,3 +34,30 @@ Proyek ini menampilkan menu makanan, minuman, dan promo dalam format layar fulls
 ```bash
 git clone https://github.com/username/gamezone-display.git
 cd gamezone-display
+
+2. Buka file index.html di browser modern (Chrome, Edge, Firefox).
+    Browser harus mendukung fullscreen API dan ES6 JavaScript.
+    Layar akan otomatis menyesuaikan resolusi 16:9.
+
+3. Klik sekali layar untuk mengaktifkan fullscreen.
+    Fullscreen akan menjaga tampilan layar tetap optimal.
+4. Slideshow rekomendasi menu akan berjalan otomatis tiap 6 detik.
+    Rekomendasi ditampilkan berdasarkan popularitas menu (popular).
+5. Jam realtime akan otomatis ditampilkan di header.
+6. Footer ticker berjalan terus menampilkan promo, info top up, dan sosial media.
+
+📝 Pengaturan
+1. Menambahkan / Mengubah Menu
+Edit file menu-data.js:
+const MENU = [
+  {
+    id: 1,
+    name: 'Nama Menu',
+    price: 25000,
+    desc: 'Deskripsi menu',
+    img: 'img/nama_gambar.jpg',
+    popular: 90
+  },
+  ...
+];
+
