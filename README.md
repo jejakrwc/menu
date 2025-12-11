@@ -61,3 +61,14 @@ const MENU = [
   ...
 ];
 
+id → Nomor unik setiap item.
+
+name → Nama menu.
+
+price → Harga dalam satuan Rupiah (angka).
+
+desc → Deskripsi singkat menu.
+
+img → Path gambar, pastikan ada di folder img/.
+
+popular → Nilai popularitas (0–100), semakin tinggi → muncul lebih dulu di rekomendasi.
