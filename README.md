@@ -20,11 +20,11 @@ Proyek ini menampilkan menu makanan, minuman, dan promo dalam format layar fulls
 ## 🛠 Struktur File
     /project-root
     │
-├─ index.html       # Halaman utama display menu
-├─ styles.css       # Styling layout dan tema
-├─ script.js        # Logika slideshow, clock, fullscreen
-├─ menu-data.js     # Data menu (nama, harga, deskripsi, popularitas, gambar)
-└─ img/             # Folder berisi semua gambar menu (organisasi bebas)
+    ├─ index.html       # Halaman utama display menu
+    ├─ styles.css       # Styling layout dan tema
+    ├─ script.js        # Logika slideshow, clock, fullscreen
+    ├─ menu-data.js     # Data menu (nama, harga, deskripsi, popularitas, gambar)
+    └─ img/             # Folder berisi semua gambar menu (organisasi bebas)
 
 
 ---
