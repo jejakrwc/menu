@@ -35,7 +35,7 @@ Proyek ini menampilkan menu makanan, minuman, dan promo dalam format layar fulls
 git clone https://github.com/username/gamezone-display.git
 cd gamezone-display
 
-2. Buka file index.html di browser modern (Chrome, Edge, Firefox).
+## Buka file index.html di browser modern (Chrome, Edge, Firefox).
     Browser harus mendukung fullscreen API dan ES6 JavaScript.
     Layar akan otomatis menyesuaikan resolusi 16:9.
 
